@@ -9,4 +9,4 @@ def some_values():
     return data
 
 def only_fives():
-    data = [ 5, 5, 5, 5 ]
+    data = [ 5, 5, 5, 5, 5 ]
