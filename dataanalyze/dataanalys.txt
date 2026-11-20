@@ -16,3 +16,15 @@ I histrogramet så blir staplarna mer jämna inom höjden och det som händer me
 
 6. Ändra intervallet från 0-100 till 0-10. Vad händer med x-axeln? (återställ sen till 100 värden mellan 0 och 100 samt till 10 stapelintervall).
 Det som händer med x-axeln är att skalar intervallet automatiskt om till 0-10 istället för 0-100. Det beror på att Matplotlib justerar x-axeln dynamiskt beroende på vad datavärdens min och maxvärde är för något.
+
+7. Vilken fil bestämmer vilka data som skapas?
+I data.py så deineras funktionen create_data som då i sin tur använder np.random.uniform() för att då kunna kontrollera värdeintervallet, fördelningstyp och mängden flyttall som är genererade som returneras.
+
+8. Vilken fil bestämmer hur diagrammet ser ut?
+Samma som i data men att i diagram.py så defineras istället funktionen show_histogram(data). Med hjälp av Matplotlib.pyplot justerar antalet stapelintervallet och digramtypen för att senare rita ut grafen jag är efter.
+
+9. Varför skickas data till visa_histogram(data) i stället för att skapa en ny datamängd i diagram.py?
+Det diagramfunktionen kan göra är att rita/visa up vilken datamängd som helst medans jag säkrar att den exakta datan framställs som att den genereades och skrevs ut i main.py också.
+
+10. Vad är skillnaden mellan att returnera data och att skriva ut data med print()?
+Det returnera gör är att den skickar tillbaka exakta datavärdet som den har i minnet så att den programmen som finns ska kunna använda den och även spara den medans det print() gör är att skriva ut texten som ska visas i terminaeln för mig utan att behöva spara något.
